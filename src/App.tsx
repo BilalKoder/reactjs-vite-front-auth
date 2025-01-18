@@ -16,7 +16,6 @@ function App() {
       <Toaster/>
       <Router>
         <Routes>
-          {/* <Route path="/login" element={<LoginPage />} /> */}
           <Route path="/login" element={<ProtectedLogin />} />
           <Route path="/" element={<PrivateRoute loginUrl={"/login"}/>} >
             <Route path="/dashboard" element={<AccountPage />} />

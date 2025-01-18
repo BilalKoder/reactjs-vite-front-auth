@@ -6,7 +6,6 @@ import {useAuth} from "@/lib/auth-util";
 
 const navigation = [
   { name: "Home", href: "#" },
-  // { name: "Account", href: "/account" },
 ];
 
 export default function Example() {
