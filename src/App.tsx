@@ -9,7 +9,6 @@ import { Toaster} from 'react-hot-toast';
 import "./App.css";
 import ProtectedLogin from "./components/ProtectedLogin";
 
-
 function App() {
 
   return (

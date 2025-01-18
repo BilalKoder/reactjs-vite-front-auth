@@ -6,16 +6,14 @@ import { useAuth } from "@/lib/auth-util";
 import axios from "axios";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
-
 export default function AuthPage() {
+  const baseURL = import.meta.env.VITE_BACKEND_BASE_URL; 
   const navigate = useNavigate();
   const [isSignup, setIsSignup] = useState(false); // Toggle between login & signup
-
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { loginUser } = useAuth();
-  const { search } = useLocation();
 
   const toggleAuthMode = () => {
       // Reset form fields when toggling between login and signup
@@ -34,7 +32,6 @@ export default function AuthPage() {
   };
 
  
-const baseURL = "http://localhost:3000";
 
 const handleSubmit = async (e: MouseEvent) => {
   e.preventDefault();
